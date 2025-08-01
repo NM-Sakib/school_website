@@ -21,16 +21,37 @@ use App\Http\Controllers\Administrative\AdmissionController;
 use App\Http\Controllers\Administrative\ContactInboxController;
 use App\Http\Controllers\Administrative\PageController;
 
+// Frontend Controllers
+use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Frontend\AboutController;
+use App\Http\Controllers\Frontend\AcademicsController;
+use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\GalleryController as FrontendGalleryController;
+
 Auth::routes();
 
 Route::get('/linkstorage', function () {
     Artisan::call('storage:link');
 });
 
-Route::get('/',  function () {
+// Frontend Routes
+Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/academics', [AcademicsController::class, 'index'])->name('academics');
+Route::get('/teachers', [FrontendController::class, 'teachers'])->name('teachers');
+Route::get('/news', [FrontendController::class, 'news'])->name('news');
+Route::get('/news/{slug}', [FrontendController::class, 'newsDetail'])->name('news.detail');
+Route::get('/events', [FrontendController::class, 'events'])->name('events');
+Route::get('/gallery', [FrontendGalleryController::class, 'index'])->name('gallery');
+Route::get('/notices', [FrontendController::class, 'notices'])->name('notices');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+// Admin Routes
+Route::get('/admin',  function () {
     return redirect()->route('administrative.login');
 });
-Route::get('/login', [AuthController::class, 'index'])->name('administrative.login');
+Route::get('/admin/login', [AuthController::class, 'index'])->name('administrative.login');
 
 Route::post('login', [AuthController::class, 'authenticate'])->name('login.post');
 
@@ -196,6 +217,4 @@ Route::namespace('Administrative')->middleware('auth')->prefix('administrative')
         Route::post('create', [PageController::class, 'store'])->name('pages.store');
         Route::delete('delete/{id}', [PageController::class, 'destroy'])->name('pages.destroy');
     });
-
 });
-
