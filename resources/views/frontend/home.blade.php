@@ -13,7 +13,8 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110cfe1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    <img
+                        src="{{ asset('assets/images/hero.png') }}"
                         class="d-block w-100" alt="School Building">
                     <div class="carousel-caption">
                         <h1 class="display-4 fw-bold">Welcome to Siddique Memorial School And College</h1>
@@ -331,22 +332,22 @@
 @if ($popupNotice)
     @section('scripts')
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 // Show popup notice
                 const popup = document.createElement('div');
                 popup.className = 'popup-notice';
                 popup.innerHTML = `
-        <div class="popup-content">
-            <div class="popup-header">
-                <h5>Important Notice</h5>
-                <button type="button" class="btn-close" onclick="this.parentElement.parentElement.parentElement.remove()"></button>
-            </div>
-            <div class="popup-body">
-                <h6>{{ $popupNotice->title }}</h6>
-                <p>{{ $popupNotice->description }}</p>
-            </div>
-        </div>
-    `;
+                <div class="popup-content">
+                    <div class="popup-header">
+                        <h5>Important Notice</h5>
+                        <button type="button" class="btn-close" onclick="this.parentElement.parentElement.parentElement.remove()"></button>
+                    </div>
+                    <div class="popup-body">
+                        <h6>{{ $popupNotice->title }}</h6>
+                        <p>{{ $popupNotice->description }}</p>
+                    </div>
+                </div>
+            `;
                 document.body.appendChild(popup);
             });
         </script>

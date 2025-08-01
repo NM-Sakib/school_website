@@ -50,8 +50,8 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ route('home') }}">
                     <div class="brand-text">
-                        <h4 class="mb-0">Siddique Memorial School And College</h4>
-                        <p class="mb-0 text-muted">Rangpur</p>
+                        <h5 class="mb-0">Siddique Memorial School And College, Rangpur</h5>
+                        {{-- <p class="mb-0 text-muted">Rangpur</p> --}}
                     </div>
                 </a>
 
