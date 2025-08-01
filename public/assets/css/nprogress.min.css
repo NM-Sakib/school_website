@@ -1,0 +1,120 @@
+#nprogress {
+  pointer-events: none;
+}
+
+/* #nprogress .bar {
+  background: #f5ad00;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+} */
+
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1;
+  -webkit-transform: rotate(3deg) translate(0, -4px);
+  -ms-transform: rotate(3deg) translate(0, -4px);
+  transform: rotate(3deg) translate(0, -4px);
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .bar,
+.nprogress-custom-parent #nprogress .spinner {
+  position: absolute;
+}
+
+/* Spinner Container */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  animation: slideDownFadeIn 0.4s ease forwards;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Spinner Icon */
+#nprogress .spinner-icon {
+  width: 36px;
+  height: 36px;
+  box-sizing: border-box;
+  border: 3px solid rgba(0, 0, 0, 0.07);
+  border-top: 3px solid #1877f2;
+  border-left: 3px solid #1877f2;
+  border-radius: 50%;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+
+  animation: nprogress-spinner 800ms linear infinite;
+}
+
+/* Fade-out Class */
+#nprogress .spinner.fade-out {
+  animation: slideUpFadeOut 0.4s ease forwards;
+}
+
+/* Spinner Rotation */
+@-webkit-keyframes nprogress-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Entry Animation */
+@keyframes slideDownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+/* Exit Animation */
+@keyframes slideUpFadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -30px) scale(0.95);
+  }
+}
