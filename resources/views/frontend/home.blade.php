@@ -19,7 +19,7 @@
                     <div class="carousel-caption">
                         <h1 class="display-4 fw-bold">Welcome to Siddique Memorial School And College</h1>
                         <p class="lead">Education | Morality | Discipline</p>
-                        <a href="{{ route('about') }}" class="btn btn-primary btn-lg">Learn More</a>
+                        <a href="{{ route('frontend.about') }}" class="btn btn-primary btn-lg">Learn More</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -28,7 +28,7 @@
                     <div class="carousel-caption">
                         <h1 class="display-4 fw-bold">Excellence in Education</h1>
                         <p class="lead">Providing quality education since 1978</p>
-                        <a href="{{ route('academics') }}" class="btn btn-primary btn-lg">Our Academics</a>
+                        <a href="{{ route('frontend.academics') }}" class="btn btn-primary btn-lg">Our Academics</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -37,7 +37,7 @@
                     <div class="carousel-caption">
                         <h1 class="display-4 fw-bold">Building Future Leaders</h1>
                         <p class="lead">Nurturing talent and character</p>
-                        <a href="{{ route('contact') }}" class="btn btn-primary btn-lg">Contact Us</a>
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-primary btn-lg">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -77,11 +77,11 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{ route('about') }}" class="btn btn-outline-primary mt-3">Read More</a>
+                    <a href="{{ route('frontend.about') }}" class="btn btn-outline-primary mt-3">Read More</a>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110cfe1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                        alt="School Building" class="img-fluid rounded">
+                    <img src="{{ asset('assets/images/building.jpeg') }}"
+                        alt="School Building" class="img-fluid rounded w-100 h-100">
                 </div>
             </div>
         </div>
@@ -140,7 +140,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ $news->title }}</h5>
                                 <p class="card-text text-muted">{{ Str::limit($news->description, 100) }}</p>
-                                <a href="{{ route('news.detail', $news->slug) }}" class="btn btn-outline-primary">Read
+                                <a href="{{ route('frontend.news.detail', $news->slug) }}" class="btn btn-outline-primary">Read
                                     More</a>
                             </div>
                             <div class="card-footer text-muted">
@@ -157,7 +157,7 @@
                 @endforelse
             </div>
             <div class="text-center mt-4">
-                <a href="{{ route('news') }}" class="btn btn-primary">View All News</a>
+                <a href="{{ route('frontend.news') }}" class="btn btn-primary">View All News</a>
             </div>
         </div>
     </section>
@@ -197,7 +197,7 @@
                 @endforelse
             </div>
             <div class="text-center mt-4">
-                <a href="{{ route('events') }}" class="btn btn-primary">View All Events</a>
+                <a href="{{ route('frontend.events') }}" class="btn btn-primary">View All Events</a>
             </div>
         </div>
     </section>
@@ -230,7 +230,7 @@
                         @endforelse
                     </div>
                     <div class="mt-3">
-                        <a href="{{ route('notices') }}" class="btn btn-outline-primary">View All Notices</a>
+                        <a href="{{ route('frontend.notices') }}" class="btn btn-outline-primary">View All Notices</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -288,7 +288,7 @@
                 @endforelse
             </div>
             <div class="text-center mt-4">
-                <a href="{{ route('gallery') }}" class="btn btn-primary">View All Photos</a>
+                <a href="{{ route('frontend.gallery') }}" class="btn btn-primary">View All Photos</a>
             </div>
         </div>
     </section>
@@ -323,7 +323,7 @@
                 @endforelse
             </div>
             <div class="text-center mt-4">
-                <a href="{{ route('teachers') }}" class="btn btn-primary">View All Teachers</a>
+                <a href="{{ route('frontend.teachers') }}" class="btn btn-primary">View All Teachers</a>
             </div>
         </div>
     </section>

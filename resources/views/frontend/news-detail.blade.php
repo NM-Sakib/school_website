@@ -11,8 +11,8 @@
                     <h1 class="display-4 fw-bold">News Detail</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-white">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('news') }}" class="text-white">News</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('frontend.home') }}" class="text-white">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('frontend.news') }}" class="text-white">News</a></li>
                             <li class="breadcrumb-item active text-white" aria-current="page">Detail</li>
                         </ol>
                     </nav>
@@ -51,7 +51,7 @@
                         <div class="card-body">
                             @forelse($relatedNews as $related)
                                 <div class="related-news-item mb-3">
-                                    <h6><a href="{{ route('news.detail', $related->slug) }}"
+                                    <h6><a href="{{ route('frontend.news.detail', $related->slug) }}"
                                             class="text-decoration-none">{{ $related->title }}</a></h6>
                                     <small class="text-muted">{{ $related->created_at->format('M d, Y') }}</small>
                                 </div>

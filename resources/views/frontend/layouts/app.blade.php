@@ -48,7 +48,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('home') }}">
+                <a class="navbar-brand" href="{{ route('frontend.home') }}">
                     <div class="brand-text">
                         <h5 class="mb-0">Siddique Memorial School And College, Rangpur</h5>
                         {{-- <p class="mb-0 text-muted">Rangpur</p> --}}
@@ -62,47 +62,47 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}"
-                                href="{{ route('home') }}">Home</a>
+                            <a class="nav-link {{ request()->routeIs('frontend.home') ? 'active' : '' }}"
+                                href="{{ route('frontend.home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}"
-                                href="{{ route('about') }}">About</a>
+                            <a class="nav-link {{ request()->routeIs('frontend.about') ? 'active' : '' }}"
+                                href="{{ route('frontend.about') }}">About</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                 Academics
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('academics') }}">Overview</a></li>
+                                <li><a class="dropdown-item" href="{{ route('frontend.academics') }}">Overview</a></li>
                                 <li><a class="dropdown-item" href="#">Admission</a></li>
                                 <li><a class="dropdown-item" href="#">Class Routine</a></li>
                                 <li><a class="dropdown-item" href="#">Results</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('teachers') ? 'active' : '' }}"
-                                href="{{ route('teachers') }}">Teachers</a>
+                            <a class="nav-link {{ request()->routeIs('frontend.teachers') ? 'active' : '' }}"
+                                href="{{ route('frontend.teachers') }}">Teachers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('news*') ? 'active' : '' }}"
-                                href="{{ route('news') }}">News</a>
+                            <a class="nav-link {{ request()->routeIs('frontend.news*') ? 'active' : '' }}"
+                                href="{{ route('frontend.news') }}">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('events') ? 'active' : '' }}"
-                                href="{{ route('events') }}">Events</a>
+                            <a class="nav-link {{ request()->routeIs('frontend.events') ? 'active' : '' }}"
+                                href="{{ route('frontend.events') }}">Events</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('gallery') ? 'active' : '' }}"
-                                href="{{ route('gallery') }}">Gallery</a>
+                            <a class="nav-link {{ request()->routeIs('frontend.gallery') ? 'active' : '' }}"
+                                href="{{ route('frontend.gallery') }}">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('notices') ? 'active' : '' }}"
-                                href="{{ route('notices') }}">Notices</a>
+                            <a class="nav-link {{ request()->routeIs('frontend.notices') ? 'active' : '' }}"
+                                href="{{ route('frontend.notices') }}">Notices</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}"
-                                href="{{ route('contact') }}">Contact</a>
+                            <a class="nav-link {{ request()->routeIs('frontend.contact') ? 'active' : '' }}"
+                                href="{{ route('frontend.contact') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -133,11 +133,11 @@
                 <div class="col-lg-4 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="{{ route('about') }}" class="text-muted">About Us</a></li>
-                        <li><a href="{{ route('academics') }}" class="text-muted">Academics</a></li>
-                        <li><a href="{{ route('teachers') }}" class="text-muted">Our Teachers</a></li>
-                        <li><a href="{{ route('news') }}" class="text-muted">Latest News</a></li>
-                        <li><a href="{{ route('gallery') }}" class="text-muted">Photo Gallery</a></li>
+                        <li><a href="{{ route('frontend.about') }}" class="text-muted">About Us</a></li>
+                        <li><a href="{{ route('frontend.academics') }}" class="text-muted">Academics</a></li>
+                        <li><a href="{{ route('frontend.teachers') }}" class="text-muted">Our Teachers</a></li>
+                        <li><a href="{{ route('frontend.news') }}" class="text-muted">Latest News</a></li>
+                        <li><a href="{{ route('frontend.gallery') }}" class="text-muted">Photo Gallery</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 mb-4">

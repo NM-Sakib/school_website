@@ -11,7 +11,7 @@
                     <h1 class="display-4 fw-bold">Academics</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-white">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('frontend.home') }}" class="text-white">Home</a></li>
                             <li class="breadcrumb-item active text-white" aria-current="page">Academics</li>
                         </ol>
                     </nav>

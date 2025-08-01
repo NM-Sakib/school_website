@@ -35,17 +35,17 @@ Route::get('/linkstorage', function () {
 });
 
 // Frontend Routes
-Route::get('/', [FrontendController::class, 'index'])->name('home');
-Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/academics', [AcademicsController::class, 'index'])->name('academics');
-Route::get('/teachers', [FrontendController::class, 'teachers'])->name('teachers');
-Route::get('/news', [FrontendController::class, 'news'])->name('news');
-Route::get('/news/{slug}', [FrontendController::class, 'newsDetail'])->name('news.detail');
-Route::get('/events', [FrontendController::class, 'events'])->name('events');
-Route::get('/gallery', [FrontendGalleryController::class, 'index'])->name('gallery');
-Route::get('/notices', [FrontendController::class, 'notices'])->name('notices');
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/', [FrontendController::class, 'index'])->name('frontend.home');
+Route::get('/about', [AboutController::class, 'index'])->name('frontend.about');
+Route::get('/academics', [AcademicsController::class, 'index'])->name('frontend.academics');
+Route::get('/teacher', [FrontendController::class, 'teachers'])->name('frontend.teachers');
+Route::get('/news', [FrontendController::class, 'news'])->name('frontend.news');
+Route::get('/news/{slug}', [FrontendController::class, 'newsDetail'])->name('frontend.news.detail');
+Route::get('/events', [FrontendController::class, 'events'])->name('frontend.events');
+Route::get('/gallery', [FrontendGalleryController::class, 'index'])->name('frontend.gallery');
+Route::get('/notices', [FrontendController::class, 'notices'])->name('frontend.notices');
+Route::get('/contact', [ContactController::class, 'index'])->name('frontend.contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('frontend.contact.store');
 
 // Admin Routes
 Route::get('/admin',  function () {

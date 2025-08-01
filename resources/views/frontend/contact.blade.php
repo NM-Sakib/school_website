@@ -11,7 +11,7 @@
                     <h1 class="display-4 fw-bold">Contact Us</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-white">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('frontend.home') }}" class="text-white">Home</a></li>
                             <li class="breadcrumb-item active text-white" aria-current="page">Contact</li>
                         </ol>
                     </nav>
@@ -35,7 +35,7 @@
                         </div>
                     @endif
 
-                    <form id="contactForm" action="{{ route('contact.store') }}" method="POST">
+                    <form id="contactForm" action="{{ route('frontend.contact.store') }}" method="POST">
                         @csrf
                         <div class="row">
                             <div class="col-md-6 mb-3">

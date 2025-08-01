@@ -11,7 +11,7 @@
                     <h1 class="display-4 fw-bold">Latest News</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-white">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('frontend.home') }}" class="text-white">Home</a></li>
                             <li class="breadcrumb-item active text-white" aria-current="page">News</li>
                         </ol>
                     </nav>
@@ -32,7 +32,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ $item->title }}</h5>
                                 <p class="card-text text-muted">{{ Str::limit($item->description, 100) }}</p>
-                                <a href="{{ route('news.detail', $item->slug) }}" class="btn btn-outline-primary">Read
+                                <a href="{{ route('frontend.news.detail', $item->slug) }}" class="btn btn-outline-primary">Read
                                     More</a>
                             </div>
                             <div class="card-footer text-muted">
